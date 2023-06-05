@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.box {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+
+
+
+}
+.userCard {
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #999;
+    margin-top:20px;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: large;
+
+}
+
+.Header {
+    background-color: #17a2b8;
+    height: 125px;
+    margin-bottom: 70px;
+}
+
+.userInfo {
+    padding:20px;
+    margin:0px 20px;
+}
+.userInfo h1,h3,p {
+    margin: 15px;
+}
+.icons {
+    height:20px;
+}
+.userCircle {
+    height:150px;
+    border-radius: 50%;
+
+    border: 4px solid #999;
+    background-color: white;
+    padding: 5px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
