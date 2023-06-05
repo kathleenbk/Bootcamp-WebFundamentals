@@ -1,0 +1,49 @@
+.container {
+    width: 95%;
+    background-color: aliceblue
+    padding: 10px;
+
+    display:inline-block;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+
+}
+.top {
+    background-color: #8a0303;
+    width: 95%;
+    margin:20px;
+    padding: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.middle {
+    background-color: hotpink;
+    width: 95%;
+    margin:20px;
+    padding: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.bottom {
+    background-color: blue; 
+    width: 95%;
+    margin:20px;
+    padding: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link {
+    text-align: center;
+}
+p {
+    display:inline;
+}
