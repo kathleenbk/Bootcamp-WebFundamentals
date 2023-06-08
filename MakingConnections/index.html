@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfilePage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+    <!-- Nav Bar -->
+    <div class="nav">
+        <h1 class="nav-title">Profile</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#" id="active">My Profile</a></li>
+            <li><a href="#">Find Connections</a></li>
+        </ul>
+        <button class="btn">Sign Out</button>
+    </div>
+    <!-- Main Content -->
+    <div class="box">
+        <!-- Left Side -->
+        <div class="leftColumn">
+
+            <!-- Card 1/4 -->
+            <div class="userCard">
+                <div class="Header">
+                    <img src="user-circle.png" alt="userCircle" class="userCircle">
+                </div>
+                <div class="userInfo">
+                    <h1 id="username">Jane Doe</h1>
+                    <h3>
+                        <img src="map-marker.png" alt="mapMarker" class="icons"> 
+                        Bellevue
+                    </h3>
+                    <p>Developer | Engineer | Problem Solver<br>
+                    Master of shadows and the Internet!</p>
+                    <p onclick="nameChange()">
+                        <a href="#">
+                            <img src="gear.png" alt="gear" class="icons"> 
+                            edit profile
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2/4 -->
+            <div class="Card2">
+                <div class="Header2">
+                    <h2>Education</h2>
+                </div>
+                <!-- Content of Card 2 -->
+                <div class="Education">
+                    <h3>Coding Dojo - Full Stack Bootcamp<br>
+                    <span class="date">Mar 2022 - July 2022</span></h3>
+                    <p>Triple black belt in Python, MERN, and Java...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="rightColumn">
+            <!-- Card 3/4 -->
+            <div class="Card3">
+                <div class="Header2">
+                    <h2><span class="numberCircle">2</span>Connection Requests</h2>
+                </div>
+
+                <!-- Content of Card 3 -->
+                <div class="connectionRequests">
+                    <div id="todd" class="todd">
+                        <div class="req">
+                            <img src=images/todd-s.jpg alt="Todd" class="otherusers">
+                            <h4>Todd E</h4>
+                        </div>
+                        <div>
+                            <img onclick="removeRequest('#todd')" src="accept-circle.png" alt="accept" class="accept">
+                            <img onclick="removeRequest('#todd')" src="close-circle.png" alt="deny" class="accept">
+                        </div>
+                    </div>
+                    <div id="phil" class="phil">
+                        <div class="req">
+                            <img src=images/phil-s.jpg alt="Phil" class="otherusers">
+                            <h4>Phil K</h4>
+                        </div>
+                        <div>
+                            <img onclick="removeRequest('#phil')" src="accept-circle.png" alt="accept" class="accept">
+                            <img onclick="removeRequest('#phil')" src="close-circle.png" alt="deny" class="accept">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4/4 -->
+            <div class="Card4">
+                <div class="Header2">
+                    <h2><span class="numberCircle">500+</span>Your Connections</h2>
+                </div>
+                <!-- Content of Card 4 -->
+                <div class="yourConnections">
+                    <ol>
+                        <li><img src="images/adrien-s.jpg" alt="Adrien" class="otherusers">
+                        Adrien D</li>
+                        <li><img src="images/anne-s.jpg" alt="Adrien" class="otherusers">
+                        Anne J</li>
+                        <li><img src="images/alayne-s.jpg" alt="Adrien" class="otherusers">
+                        Alayne T</li>
+                        <li><img src="images/arry-s.jpg" alt="Adrien" class="otherusers">
+                        Arry Y</li>
+                    </ol>
+                </div>
+                <div class="viewmore">
+                    <h3>
+                        <a href="#">View More</a>
+                    </h3>
+                </div>
+            </div>
+        
+        </div>
+    </div>    
+<script src="script.js"></script>
+</body>
+</html>

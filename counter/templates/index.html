@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        .mainContainer {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 15px;
+            background-color: lightskyblue;
+            font-size: xx-large;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+        <h1>Counter</h1>
+        <h3>{{"{} time(s)".format(session.get('visits')) }}</h3>
+    </div>
+</body>
+</html>

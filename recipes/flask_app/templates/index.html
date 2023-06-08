@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .maincontainer {
+            padding: 25px 300px 25px 300px;
+        }
+        .card {
+            padding:25px
+        }
+        .btn {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontainer d-flex justify-content-between">
+        <div class="card">
+
+            <!-- REGISTER USER -->
+            <form class="form" action="/register" method="POST">
+                <h2>Register</h2>
+
+                <!-- Get error messages -->
+                {% with messages = get_flashed_messages(category_filter=['register']) %}     <!-- declare a variable called messages -->
+                    {% if messages %}                            <!-- check if there are any messages -->
+                        <h4 class="text-danger">ERROR - User not created</h4>
+                        {% for message in messages %}            <!-- loop through the messages -->
+                            <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                
+                <!-- Registration Form -->
+                <div class="form-group">
+                    <label for="first_name">First Name:</label>
+                        <input class="form-control" type="text" name="first_name">
+                </div>
+                <div>
+                    <label for="last_name">Last Name:</label>
+                        <input class="form-control" type="text" name="last_name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                        <input class="form-control" type="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                        <input class="form-control" type="password" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password:</label>
+                        <input class="form-control" type="password" name="confirm_password">
+                </div>
+                <input class="btn btn-primary" type="submit" value="Register">
+            </form>
+        </div>
+
+        <div class="card">
+
+            <!-- LOGIN USER -->
+            <form action="/login" method="POST">
+                <h3>Login</h3>
+
+                <!-- Get error messages -->
+                {% with messages = get_flashed_messages(category_filter=['login']) %}     <!-- declare a variable called messages -->
+                    {% if messages %}                            <!-- check if there are any messages -->
+                    <h2 class="text-danger">ERROR</h2>
+                        {% for message in messages %}            <!-- loop through the messages -->
+                            <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                        {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <!-- Login Form -->
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                            <input class="form-control" type="text" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                            <input class="form-control" type="password" name="password">
+                    </div>
+                    <input class="btn btn-success" type="submit" value="Login">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Recipe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 25px 500px 25px 500px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 5px solid black;
+        }
+        .links {
+            display:flex;
+            align-items: center;
+        }
+        .dashboard {
+            margin-right: 20px;
+        }
+        .container {
+            padding: 25px;
+            display:flex;
+            justify-content: space-evenly;
+        }
+
+        .create{
+            margin-top: 190px;
+        }
+    </style>
+</head>
+<body>
+        <!-- TOP BAR -->
+    <div class="header">
+        <h1 class="text-center title">Edit Recipe</h1>
+        <div class="links">
+            <!-- Dashboard -->
+            <form action="/dashboard">
+                <input class="btn btn-primary dashboard" type="submit" value="Dashboard">
+            </form>
+            <!-- Logout -->
+            <form action="/logout">
+                <input class="btn btn-danger" type="submit" value="Logout">
+            </form>
+        </div>
+    </div>
+    
+    <form action="/recipes/update/{{recipe.id}}" method="POST">
+        <input type="hidden" name="id" value={{recipe.id}}>
+        {% with messages = get_flashed_messages(category_filter=['recipe']) %}     <!-- declare a variable called messages -->
+                    {% if messages %}                            <!-- check if there are any messages -->
+                        <h2 class="text-danger">ERROR</h2>
+                        {% for message in messages %}            <!-- loop through the messages -->
+                            <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+        <div class="container">
+            <div class="column">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                        <input class="form-control" type="text" name="name" value="{{recipe.name}}">
+                </div>
+                <div>
+                    <label for="description">Description:</label>
+                        <textarea class="form-control description" type="textarea" name="description" value="{{recipe.description}}">{{recipe.description}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="directions">Instructions:</label>
+                        <textarea class="form-control instructions" type="text" name="directions" value="{{recipe.directions}}">{{recipe.directions}}</textarea>
+                </div>
+            </div>
+            <div class="column">
+                <div class="form-group">
+                    <label for="date">Date Made On:</label>
+                        <input class="form-control" type="date" name="date" value="{{recipe.date}}">
+                </div>
+                <div class="form-group"><br>
+                    <p>Under 30 Minutes?</p>
+                    <div class="form-check">
+                        <label for="time" class="form-check-label">Yes</label>
+                        <input type="checkbox" class="form-check-input" id="yes" name="time" value="Yes" {% if recipe.time == 'Yes' %} checked {% endif %}>
+                    </div>
+                    <div class="form-check">
+                        <label for="time" class="form-check-label">No</label>
+                        <input type="checkbox" class="form-check-input" id="no" name="time" value="No">
+                    </div>
+                </div>
+                <input class="btn btn-success create " type="submit" value="Update Recipe">
+            </div>
+        </div>
+
+    </form>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+.maincontainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding:20px;
+    
+}
+
+
+
+h1 {
+    padding: 20px;
+
+    text-align: center;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Network</h1>
+    </div>
+    <div class="header2">
+        <h1>Your Feed</h1>
+    </div>
+
+    <!-- Main Container -->
+    <div class="mainContainer">
+
+        <!-- Left Column -->
+        <div class="leftColumn">
+
+            <!-- User Card -->
+            <div class="userCard">
+                <img src="user-circle.png" alt="userCircle" class="userCircle"><br>
+                <a href="#">Add an avatar</a>
+                <h2 class="James">James Doe</h2>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="rightColumn">
+
+
+            <!-- Top Card -->
+            <div class="card1">
+
+                <!-- Card Header -->
+                <div class="cardHeader">
+                    <div class="leftHeaderColumn">
+                        <h2 class="name">Neil M</h2>
+                    </div>
+                    <div class="rightHeaderColumn">
+                        <h3><span id="NeilLikes">9</span> like(s)</h3>
+                        <button class="likeButton" onclick="upLikes(0)">Like</button>
+                    </div>
+                </div>
+
+                <!-- Card Body -->
+                <div class="cardBody">
+                    <p>I just set up this new discord bot, let me know what you all think. <a href="#">link</a></p>
+                </div>
+            </div>
+
+
+            <!-- Middle Card -->
+            <div class="card2">
+
+                <!-- Card Header -->
+                <div class="cardHeader">
+                    <div class="leftHeaderColumn">
+                        <h2 class="name">Nichole K</h2>
+                    </div>
+                    <div class="rightHeaderColumn">
+                        <h3><span id="NicholeLikes">12</span> like(s)</h3>
+                        <button class="likeButton" onclick="upLikes(1)">Like</button>
+                    </div>
+                </div>
+
+                <!-- Card Body -->
+                <div class="cardBody">
+                    <p>Just finished my <a href="#">next comic</a>, check it out.</p>
+                </div>
+            </div>
+
+
+            <!-- Bottom Card -->
+            <div class="card3">
+
+                <!-- Card Header -->
+                <div class="cardHeader">
+                    <div class="leftHeaderColumn">
+                        <h2 class="name">Jim R</h2>
+                    </div>
+                    <div class="rightHeaderColumn">
+                        <h3><span id="JimLikes">9</span> like(s)</h3>
+                        <button class="likeButton" onclick="upLikes(2)">Like</button>
+                    </div>
+                </div>
+
+                <!-- Card Body -->
+                <div class="cardBody">
+                    <p>I can't stop listening to the <a href="#">new album</a>. Who else is liking it?</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

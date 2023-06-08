@@ -1,0 +1,180 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* nav bar */
+.nav {
+    height: 90px;
+    width: 100%;
+    background-color: rgb(51,51,51);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto';
+}
+
+.nav-title {
+    font-size: 42px;
+    margin-left: 95px;
+    color: white;;
+}
+
+.nav-links {
+    list-style-type: none;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;  
+}
+
+#active {
+    color:white;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #999;
+    font-size: 22px;
+    padding: 15px;
+}
+
+.btn {
+    background-color: rgb(23,162,184);
+    color: white;
+    font-family: 'Roboto';
+    box-shadow: 2px 2px black;
+    font-size: 22px;
+    margin-right: 95px;
+    width:120px;
+}
+
+/* main container */
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px 80px 50px 80px;
+    font-family: sans-serif;
+}
+
+/* Columns */
+.leftColumn {
+    flex:2;
+    padding:15px;
+}
+.rightColumn {
+    flex:1;
+    padding:15px;
+}
+
+/* cards */
+.userCard, .Card2, .Card3, .Card4 {
+    background-color: #fff;
+    border: 2px solid #999;
+    overflow: hidden;
+    font-size: large;
+    margin-bottom:30px;
+}
+
+/* styling for userCard */
+.Header {
+    background-color: #17a2b8;
+    height: 125px;
+    margin-bottom: 70px;
+}
+.userInfo {
+    padding:20px;
+    margin:0px 20px;
+}
+.userInfo h1,h2,h3,p {
+    margin: 15px;
+}
+.icons {
+    height:20px;
+}
+.userCircle {
+    height:150px;
+    border-radius: 50%;
+    border: 4px solid #999;
+    background-color: white;
+    padding: 5px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+
+/* header for other cards */
+.Header2 {
+    background-color: rgb(51,51,51);
+    color:white;
+    font-family: 'Roboto';
+    padding: 5px;
+    font-size: small;
+}
+
+.numberCircle {
+    font-size: medium;
+    color: black;
+    background-color: #999;
+    border-radius:50%;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+/*Education */
+.date {
+    font-size:medium;
+    color:#999;
+}
+
+/*Connection Requests */
+.connectionRequests {
+    padding: 10px;
+    font-weight: bold;
+}
+.todd, .phil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.req {
+    display: flex;
+    gap: 5px;
+}
+
+.accept {
+    height: 40px;
+    
+}
+/*Your Connections */
+.yourConnections {
+    padding:10px;
+    font-weight: bold;
+}
+.viewmore {
+    border-top: 2px solid #999;
+}
+
+/*all Connections */
+.otherusers {
+    height:40px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.rightColumn li{
+    display:flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rightColumn h4{
+    display:flex;
+    align-items: center;
+    gap: 5px;
+}

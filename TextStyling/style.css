@@ -1,0 +1,25 @@
+* {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+h2 {
+    background-color: rgb(102,51,153);
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    font-style: italic;
+}
+h3 {
+    background-color: rgb(159,197,248);
+    color: midnightblue;
+    text-align: right;
+    text-decoration: underline;
+}
+h1 span {
+    color:aqua;
+}

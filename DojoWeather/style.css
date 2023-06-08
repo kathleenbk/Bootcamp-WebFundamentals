@@ -1,0 +1,148 @@
+* {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    margin:0px;
+    padding:0px;
+}
+
+/* Nav Bar */
+.nav {
+    align-items: center;
+    background-color: rgb(159,197,248);
+    color: white;
+    display:flex;
+    padding:15px 100px 15px 100px;
+    justify-content: space-between;
+    
+}
+
+.navTitle {
+    flex:1;
+    font-size: 30pt;
+}
+.navLinks {
+    flex:2;
+    display:flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    font-size: 20pt;
+
+}
+
+.nav a {
+    margin-left: 60px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Header */
+
+.header {
+    margin:0px 100px 0px 100px;
+    padding:15px;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftHeader {
+    flex:2;
+    font-size: 18pt;
+}
+
+.rightHeader {
+    flex:1;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14pt;
+}
+
+.select {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+/* Container for page content */
+.mainContainer {
+    display:flex;
+    justify-content: space-between;
+    padding:15px 100px 15px 100px;
+}
+
+.column {
+    background-color: rgb(238,238,238);
+    padding: 15px;
+    text-align: center;
+}
+
+.img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.weather p {
+    font-size: 14pt;
+}
+.temp {
+    padding: 15px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.high {
+    color: rgb(207,43,40);
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.low {
+    color: rgb(49,124,228);
+    font-weight: bolder;
+    font-size: 16pt;
+}
+.high::after, .low::after {
+    content: "°";
+}
+.weather h3 {
+    font-size: 20pt;
+}
+
+.
+/* Cookies */
+.footer {
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+
+}
+.cookieJar {
+    border: 2px solid black;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    background-color: rgb(238,238,238);
+    padding:15px;
+
+}
+
+.cookieText {
+    padding:15px;
+}
+
+.button {
+    padding: 10px;
+    background-color: rgb(159,197,248);
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    font-size: 16pt;
+    font-weight: bolder;
+    width:200px;
+}
